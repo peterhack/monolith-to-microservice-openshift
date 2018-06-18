@@ -14,3 +14,4 @@ deployment/kubernetes/istio/istio-0.*
 #backend-v2/
 #orders-service/
 #deployment/
+temp/

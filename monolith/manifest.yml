@@ -1,0 +1,10 @@
+---
+applications:
+- name: ticketMonster
+  memory: 1G
+  instances: 1
+  path: target/ticket-monster.war
+  buildpack: https://github.com/cloudfoundry/java-buildpack.git
+  services:
+    - ticketMonster-mysql
+  

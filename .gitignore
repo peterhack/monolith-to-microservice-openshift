@@ -10,7 +10,7 @@ orders-service/ObjectStore/
 deployment/kubernetes/istio/istio-0.*
 
 # folders that will be revealed later durin the journey
-backend-v1/
-backend-v2/
-orders-service/
-deployment/
+#backend-v1/
+#backend-v2/
+#orders-service/
+#deployment/

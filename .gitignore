@@ -8,6 +8,7 @@ target
 deployments
 orders-service/ObjectStore/
 deployment/kubernetes/istio/istio-0.*
+temp/
 
 # folders that will be revealed later durin the journey
 backend-v1/
@@ -15,4 +16,4 @@ backend-v2/
 tm-ui-v2/
 orders-service/
 deployment/
-temp/
+operator/cr_.yaml

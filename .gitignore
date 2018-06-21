@@ -16,4 +16,4 @@ backend-v2/
 tm-ui-v2/
 orders-service/
 deployment/
-operator/cr_.yaml
+dynatrace-oneagent-operator/cr_.yaml

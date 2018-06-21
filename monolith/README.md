@@ -1,4 +1,81 @@
-# Monolith TicketMonster
+# TicketMonster Monolith
+
+## Build Ticketmonster
+
+Using Mavon on Windows, the Ticketmonster Monolith can be built from scratch, make sure you enter your own Docker name:
+```
+mvn clean install -P mysql fabric8:build -D docker.image.name=<DOCKERHUB>/ticket-monster-mysql:latest
+```
+
+## Run Ticketmonster locally
+
+```
+TODO
+docker run -d -p 
+```
+
+## Push image to Dockerhub
+
+```
+docker push <DOCKERHUB>/ticket-monster-mysql:latest
+```
+
+
+## Create project in Openshift
+
+exchange Dockerfile in ```monolith/target/docker/jetzlstorfer/ticket-monster-mysql/latest/build``` with this content:
+```
+FROM jboss/wildfly:10.1.0.Final
+EXPOSE 8080
+COPY maven /opt/jboss/wildfly/
+
+USER root 
+RUN chmod -R 777 ${JBOSS_HOME}
+USER jboss
+```
+
+Build the Docker image and push to dockerhub
+```
+docker build . -t jetzlstorfer/ticket-monster-mysql:latest
+docker push jetzlstorfer/ticket-monster-mysql:latest
+```
+
+
+create project, setup mysql service and create monolith app
+
+```
+oc new-project m2m
+oc new-app -e MYSQL_USER=ticket -e MYSQL_PASSWORD=monster -e MYSQL_DATABASE=ticketmonster mysql:5.5 
+
+oc new-app --docker-image=jetzlstorfer/ticket-monster-mysql:latest
+oc expose service ticket-monster-mysql --name monolith
+```
+
+## Apply the OneAgent operator to your OpenShift cluster
+
+Edit the ```cr.yaml``` file and enter your tenant ID, API token, as well as the PaaS token. Simply execute ```operator/apply.sh```
+which executes the following steps:
+```
+oc login YOUROPENSHIFT-MASTERURL -u system:admin
+oc create -f namespace.yaml
+oc adm policy add-scc-to-user privileged -z default -n dynatrace
+oc annotate project dynatrace openshift.io/node-selector=""
+oc create -f rbac.yaml
+oc create -f crd.yaml
+oc create -f operator.yaml
+oc create -f cr.yaml
+
+oc get deployment -n dynatrace
+```
+
+
+
+
+# OLD
+
+
+
+
 
 This is the monolith version of the TicketMonster app from the [tutorial on developers.redhat.com](https://developers.redhat.com/ticket-monster/).
 

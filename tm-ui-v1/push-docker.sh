@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-docker push jbraeuer/tm-ui:monolith
+docker push jetzlstorfer/ticket-monster-ui-v1:latest

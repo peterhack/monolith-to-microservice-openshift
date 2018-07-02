@@ -53,8 +53,10 @@ oc new-app --docker-image=jetzlstorfer/ticket-monster-mysql:latest
 oc expose service ticket-monster-mysql --name monolith
 ```
 
+Next step, deploy the [proxy](../monolith-proxy/) in front of the monolith.
+
 ## Apply the OneAgent operator to your OpenShift cluster
 
 Don't forget to apply the Dynatrace OneAgent Operator on your OpenShift cluster.
-Find the [instruction here](./dynatrace-oneagent-operator/).
+Find the [instructions here](../dynatrace-oneagent-operator/).
 

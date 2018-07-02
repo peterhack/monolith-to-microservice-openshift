@@ -8,10 +8,16 @@ The repository is a monorepo of projects that illustrate migrating a monolith ap
 
 This repository consists of a couple of sub-projects used to illustrate a migration from a JAVE EE monolithic application ([Ticketmonster](https://github.com/ticket-monster-msa/monolith)) to microservices living in the OpenShift platform.
 
+### Dynatrace OneAgent Operator
+Apply the Dynatrace OneAgent operator on your cluster to have full insights and monitoring enabled for your complete OpenShift environment. Find more information in the blog post here: https://www.dynatrace.com/news/blog/introducing-dynatrace-oneagent-operator/ 
+
+
 ### monolith
 The getting started experience begins with the [monolith](./monolith/README.md) project. In this project we deploy our monolith application and understand the domain, architecture, and structure of the application that will be the foundation for successive iterations.
  
- 
+### monolith-proxy
+A simple proxy webserver that is in front of the monolithic TicketMonster and can serve for different purposes. In our example, it simply redirects traffic to and from the TicketMonster.
+
 ### tm-ui-*
 <!-- 
 The `tm-ui-*` folders contain different versions of the front-facing UI that we use as we migrate from a monolith to split out the UI to the set of microservices.
@@ -27,6 +33,7 @@ The `backend-*` folders contain the monolith with the UI removed and successive 
 
 -->
 
+
 ## Instructions
 
 1. Clone the repository
@@ -35,9 +42,9 @@ The `backend-*` folders contain the monolith with the UI removed and successive 
    ```
 1. Lift-and-shift TicketMonster to OpenShift
   
-   In directory `monolith`, follow the [Instructions](./monolith/README.md) to run TicketMonster on OpenShift.
+   In directory `monolith`, follow the [Instructions](./monolith/) in the readme to run TicketMonster on OpenShift.
 
 1. Set a new UI in front of TicketMonster
 
-   In directory `tm-ui-v1`, follow the [Instructions](./tm-ui-v1/README.md) to set an independent UI in front of TicketMonster. 
+   In directory `tm-ui-v1`, follow the [Instructions](./tm-ui-v1/) in the readme to extract the UI from the TicketMonster. 
 

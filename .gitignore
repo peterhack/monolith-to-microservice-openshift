@@ -18,5 +18,6 @@ orders-service/
 deployment/
 dynatrace-oneagent-operator/cr_.yaml
 tm-ui-v1/httpd.conf
+tm-ui-v1/loadgen.sh
 tm-ui-v1/httpd_orig.conf
 

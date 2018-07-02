@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-docker push jetzlstorfer/ticket-monster-mysql:monolith
+docker push jetzlstorfer/ticket-monster-mysql:latest

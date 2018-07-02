@@ -7,12 +7,14 @@ Using Mavon on Windows, the Ticketmonster Monolith can be built from scratch, ma
 mvn clean install -P mysql fabric8:build -D docker.image.name=<DOCKERHUB>/ticket-monster-mysql:latest
 ```
 
+<!--
 ## Run Ticketmonster locally
 
 ```
 TODO
 docker run -d -p 
 ```
+-->
 
 ## Push image to Dockerhub
 

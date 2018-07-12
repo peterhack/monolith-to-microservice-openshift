@@ -18,3 +18,10 @@ docker push <YOURDOCKER>/monolith-proxy:latest
 # if needed, also create a new application in OpenShift
 oc new-app <YOURDOCKER>/monolith-proxy
 ```
+
+## Expose it to the public
+
+We want to create a public accessible route for the monolith which we call "production". 
+```
+oc expose svc/monolith-proxy --name=production
+```

@@ -27,13 +27,19 @@ docker push <DOCKERHUB>/ticket-monster-mysql:latest
 
 exchange Dockerfile in ```monolith/target/docker/jetzlstorfer/ticket-monster-mysql/latest/build``` with this content:
 ```
-FROM jboss/wildfly:10.1.0.Final
+FROM jboss/wildfly:10.1.0.Final 
 EXPOSE 8080
-COPY maven /opt/jboss/wildfly/
 
-USER root 
-RUN chmod -R 777 ${JBOSS_HOME}
+COPY maven $JBOSS_HOME/
+
+USER root
+
+#Give correct permissions when used in an OpenShift environment.
+RUN chown -R jboss:0 $JBOSS_HOME/ && \
+    chmod -R g+rw $JBOSS_HOME/
+
 USER jboss
+
 ```
 
 Build the Docker image and push to dockerhub

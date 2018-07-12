@@ -48,9 +48,19 @@ The technical realisation is inspired by this blog post: https://blog.openshift.
 
 The route for the service is already exposed as seen above. We have to annotate the route so we can route there regardless of the URL the user enters in his browser.
 
-Annotation for the route
+Annotation for the route you want to have the dark launch for
 ```
-oc annotate route -n <YOURNAMESPACE> <YOURPRODUCTIONROUTE> haproxy.router.openshift.io/cbr-header=ui-v1
+oc annotate route -n <YOURNAMESPACE> <YOURROUTE> haproxy.router.openshift.io/cbr-header=ui-v1
+```
+
+It should now look similar to:
+```
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  annotations:
+    haproxy.router.openshift.io/cbr-header: ui-v1
+    ...
 ```
 
 ### Edit haproxy config template
@@ -107,6 +117,9 @@ oc volume dc/router --add --overwrite \
 oc set env dc/router \
     TEMPLATE_FILE=/var/lib/haproxy/conf/custom/haproxy-config.template
 ```
+
+###
+
 
 ### Test your dark launch
 A simple curl should reveal that you are hitting the new version of the UI although you are targeting the normal ```prod-m2m``` frontend URL.

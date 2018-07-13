@@ -1,9 +1,10 @@
 # Backend-v1
 
 This sub-project will serve as the new backend instead of the monolith.
-It is meant to be called from [tm-ui-v2](../tm-ui-v2/). 
+It is meant to be called from ```tm-ui-v2```. 
 
 ## Build
+Build the project with maven.
 
 ```
 mvn clean install -P mysql fabric8:build -D docker.image.name=jetzlstorfer/ticket-monster-backend-v1:latest

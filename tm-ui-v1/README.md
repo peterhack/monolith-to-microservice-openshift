@@ -22,20 +22,16 @@ Expose the service in OpenShift
 oc expose service ticket-monster-ui-v1 --name=ui-v1
 ```
 
-
-This proxy helps us keep friendly URLs even when there are composite UIs or composite microservice REST apis
-It also helps us avoid tripping the browser Same Origin policy. We use a simple HTTP server (apache) to serve the static content and then use the reverse proxy plugins to proxy REST calls to the appropriate microservice:
-
-```
-# proxy for the admin microserivce
-ProxyPass "/rest" "http://ticket-monster:8080/rest"
-ProxyPassReverse "/rest" "http://ticket-monster:8080/rest"
-```
 ## Configuration
 
-In ```httpd.conf``` the redirect to the monolith was inserted as a proxy:
+In ```httpd.conf``` the redirect to the monolith was inserted as a proxy. This proxy helps us keep friendly URLs even when there are composite UIs or composite microservice REST APIs. It also helps us avoid tripping the browser Same Origin policy. We use a simple HTTP server (apache) to serve the static content and then use the reverse proxy plugins to proxy REST calls to the appropriate microservice:
+
 
 ```
+# get rid of some headers (needed for dark-launch feature)
+RequestHeader unset Cbr-Header
+
+# proxy to redirect to the monolith
 ProxyPass "/rest" "http://<YOURURL>/rest"
 ProxyPassReverse "/rest" "http://<YOURURL>/rest"
 ```

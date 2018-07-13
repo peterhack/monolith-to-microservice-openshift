@@ -18,17 +18,18 @@ The getting started experience begins with the [monolith](./monolith/README.md) 
 ### monolith-proxy
 A simple proxy webserver that is in front of the monolithic TicketMonster and can serve for different purposes. In our example, it simply redirects traffic to and from the TicketMonster.
 
-### tm-ui-*
-<!-- 
+### tm-ui-v*
+
 The `tm-ui-*` folders contain different versions of the front-facing UI that we use as we migrate from a monolith to split out the UI to the set of microservices.
--->
+
 The [tm-ui-v1](./tm-ui-v1/README.md) folder contains a version of the front-facing UI that we use as we migrate from a monolith to split out the UI to the set of microservices.
 
-<!-- 
-### backend
+The [tm-ui-v2](./tm-ui-v2/README.md) folder contains a version of the front-facing UI that we use to communicate with the [backend-v1](./backend-v1/) instead of the monolith.
+
+### backend-v*
 
 The `backend-*` folders contain the monolith with the UI removed and successive iterations of evolution. With `backend-v1`, we have taken the monolith as it is and removed the UI. It contains a REST API that can be called from the UI. In `backend-v2` we've stated adding feature flags for controlling the introduction of a new microservice. See each respective sub project for more information.
-  
+<!--  
 ### orders-service
 
 -->

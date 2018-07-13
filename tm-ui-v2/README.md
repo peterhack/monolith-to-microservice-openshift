@@ -1,4 +1,6 @@
-## Ticket Monster UI-V2
+# Ticket Monster UI-V2
+
+This version of the frontend is configured to communicate with the ```backend-v1``` service.
 
 ## Configuration
 

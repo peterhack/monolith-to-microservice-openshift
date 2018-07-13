@@ -45,11 +45,11 @@ oc new-app --docker-image=jetzlstorfer/ticket-monster-backend-v1:latest
 Since the backend has to communicate with the mysql database, we have to set the according environment variables for the deployment description.
 
 ```
-oc env dc/backend MYSQL_SERVICE_HOST=[IP from the DB service] MYSQL_SERVICE_PORT=3306
+oc env dc/ticket-monster-backend-v1 MYSQL_SERVICE_HOST=[IP from the DB service] MYSQL_SERVICE_PORT=3306
 ```
 check if environment variables are set
 ```
-oc env dc/backend --list
+oc env dc/ticket-monster-backend-v1 --list
 #or
 oc env pods --all --list
 ```

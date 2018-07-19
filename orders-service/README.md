@@ -18,7 +18,7 @@ This sub-project contains the microservice OrdersService that deals with TicketM
     mysql -u root orders < V1__0_ordersdb-schema.sql
     mysql -u root orders < V1__1_ordersdb-data.sql
     ```
-By the end of this steps, you have a dedicated MySQL database named ```orders``` with the schema set up and the needed data inserted.
+By the end of this steps, you have a dedicated MySQL database named `orders` with the schema set up and the needed data inserted.
 
 ## Configure and deploy the application
 
@@ -52,3 +52,4 @@ By the end of this steps, you have a dedicated MySQL database named ```orders```
     oc new-app --docker-image=<yourdocker>/orders-service:latest
   	```
 
+By the end of this steps, you have the `orders` service in place. In order to actually call this service, set the according feature flag in your FF4J console. Read more on this in the [backend-v2](../backend-v2/) sub-project.

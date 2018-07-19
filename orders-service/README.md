@@ -13,7 +13,7 @@ This sub-project contains the microservice OrdersService that deals with TicketM
     oc rsync src/main/resources/db/migration/ <your-db-pod>:/var/lib/mysql
     ```
 1. Connect to the DB pod and execute SQL statements
-    ```
+    ```bash
     oc rsh <your-db-pod>
     mysql -u root orders < V1__0_ordersdb-schema.sql
     mysql -u root orders < V1__1_ordersdb-data.sql

@@ -50,6 +50,15 @@ This version of the backend employs *feature flags* to control the data flow bet
     https://backend-v2.<yourClusterUrl>/ff4j-console
     ```
 
+## Edit the BookingService 
+In order for the ```BookingService``` to communicate with the ```OrderService``` we have to modify the URL.
+In ```backend-v2\src\main\java\org\jboss\examples\ticketmonster\rest\BookingService.java```
+edit the line:
+```java
+private String ordersServiceUri = "http://<YOUR-ORDER-SERVICE-URL>/rest/bookings";    
+```
+
+
 ## Configure and deploy the application (backend-v2)
 
 1. Modify the database credentials in standalone.xml as in backend-v1
@@ -65,7 +74,7 @@ This version of the backend employs *feature flags* to control the data flow bet
     ```
 1. Exchange Dockerfile in \target\docker\<YOURDOCKER>\backend-v2\latest\build\Dockerfile
 exchange with new version to fix permission errors
-    ```
+    ```dockerfile
     FROM jboss/wildfly:10.1.0.Final 
     EXPOSE 8080
 
@@ -89,7 +98,7 @@ exchange with new version to fix permission errors
    ```
 1. Create new application in OpenShift
     ```
-    oc new-app --docker-image=<YOURDOCKER>/backend-v2:latest
+    oc new-app --docker-image=<YOURDOCKER>/backend-v2:latest -e MYSQL_SERVICE_HOST=yourhost -e MYSQL_SERVICE_PORT=yourport
     ```
 1. Expose the backend to create publicly available URL
     ```

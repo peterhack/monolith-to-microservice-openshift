@@ -12,7 +12,8 @@ mvn clean install -P mysql fabric8:build -D docker.image.name=jetzlstorfer/ticke
 
 ## Exchange Dockerfile
 Due to some permission issues the Dockerfile in ```backend-v1\target\docker\<USER>\ticket-monster-backend-v1\latest\build\``` has to be edited to this content:
-```
+
+```dockerfile
 FROM jboss/wildfly:10.1.0.Final 
 EXPOSE 8080
 

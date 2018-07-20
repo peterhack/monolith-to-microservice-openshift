@@ -27,7 +27,7 @@ oc expose service ticket-monster-ui-v1 --name=ui-v1
 In ```httpd.conf``` the redirect to the monolith was inserted as a proxy. This proxy helps us keep friendly URLs even when there are composite UIs or composite microservice REST APIs. It also helps us avoid tripping the browser Same Origin policy. We use a simple HTTP server (apache) to serve the static content and then use the reverse proxy plugins to proxy REST calls to the appropriate microservice:
 
 
-```
+```conf
 # get rid of some headers (needed for dark-launch feature)
 RequestHeader unset Cbr-Header
 
@@ -50,7 +50,7 @@ oc annotate route -n <YOURNAMESPACE> <YOURROUTE> haproxy.router.openshift.io/cbr
 ```
 
 It should now look similar to:
-```
+```yaml
 apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
@@ -63,7 +63,7 @@ metadata:
 Copy and edit the file haproxy-config.template from the home folder of your router-pod and edit the ```frontend public``` section to enable the header based routing. More information here: https://docs.openshift.com/container-platform/3.9/install_config/router/customized_haproxy_router.html#obtaining-router-configuration-template 
 
 Insert the following section:
-```
+```template
   # Custom snippet for balancing through HTTP headers
   {{- range $cfgIdx, $cfg := .State }}
   {{- if (ne (index $cfg.Annotations "haproxy.router.openshift.io/cbr-header") "") }}
@@ -74,7 +74,7 @@ Insert the following section:
 ```
 
 Your result should look something like this:
-```
+```template
 frontend public
     {{ if eq "v4v6" $router_ip_v4_v6_mode }}
   bind :::{{env "ROUTER_SERVICE_HTTP_PORT" "80"}} v4v6

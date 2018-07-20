@@ -26,7 +26,7 @@ docker push <DOCKERHUB>/ticket-monster-mysql:latest
 ## Create project in Openshift
 
 exchange Dockerfile in ```monolith/target/docker/jetzlstorfer/ticket-monster-mysql/latest/build``` with this content:
-```
+```dockerfile
 FROM jboss/wildfly:10.1.0.Final 
 EXPOSE 8080
 

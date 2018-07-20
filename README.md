@@ -11,7 +11,7 @@ The repository is a monorepo of projects that illustrate migrating a monolith ap
 This repository consists of a couple of sub-projects used to illustrate a migration from a JAVE EE monolithic application ([Ticketmonster](https://github.com/ticket-monster-msa/monolith)) to microservices living in the OpenShift platform.
 
 ### Dynatrace OneAgent Operator
-Apply the Dynatrace OneAgent operator on your cluster to have full insights and monitoring enabled for your complete OpenShift environment. Find more information in the blog post here: https://www.dynatrace.com/news/blog/introducing-dynatrace-oneagent-operator/ 
+Apply the [Dynatrace OneAgent operator](./dynatrace-oneagent-operator/) on your cluster to have full insights and monitoring enabled for your complete OpenShift environment. Find more information in the blog post here: https://www.dynatrace.com/news/blog/introducing-dynatrace-oneagent-operator/ 
 
 
 ### monolith

@@ -53,3 +53,8 @@ By the end of this steps, you have a dedicated MySQL database named `orders` wit
   	```
 
 By the end of this steps, you have the `orders` service in place. In order to actually call this service, set the according feature flag in your FF4J console. Read more on this in the [backend-v2](../backend-v2/) sub-project.
+
+
+The following figure shows this approach from a conceptual point of view:
+
+![canary](../assets/tm-orders-service.png)

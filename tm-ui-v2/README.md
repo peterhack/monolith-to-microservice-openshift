@@ -36,3 +36,8 @@ For example, send 75 % of the traffic to ```ticket-monster-ui-v1``` and 25 % to 
 oc set route oc set route-backends production ticket-monster-ui-v1=75 ticket-monster-ui-v2=25
 ```
 
+
+The following figure shows this approach from a conceptual point of view:
+
+![canary](../assets/tm-ui-v2.png)
+

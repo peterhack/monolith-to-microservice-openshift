@@ -47,10 +47,19 @@ Tihs subproejct containts the first microsercive that is extracted from the mono
 
    In directory `tm-ui-v1`, follow the [Instructions](./tm-ui-v1/) in the readme to extract the UI from the TicketMonster. 
 
+   ![tm-ui-v1](./assets/tm-ui-v1.png)
+
 1. Get rid of the legacy UI in the monolithic code base
     
     Deploy `tm-ui-v2` that is set up to communicate with `backend-v1`. Follow the [instruction here](./tm-ui-v2/).
 
+    
+   ![tm-ui-v2](./assets/tm-ui-v2.png)
+
+
+
 1. Deploy the first microservice
 
     Deploy `backend-v2` which will communicate with the `orders-service` as your first microservice. Follow the [instructions here](./backend-v2/).
+
+    ![tm-orders-service](./assets/tm-orders-service.png)

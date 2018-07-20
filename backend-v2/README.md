@@ -112,6 +112,11 @@ In your browser, navigate to the FF4J console at ```http://backend-v2-m2m.<yourc
 ![ff4j](assets/ff4j.png)
  
 
+## Conceptual view
+
+The following figure shows this approach from a conceptual point of view:
+
+![canary](../assets/tm-orders-service.png)
 
 <!--
 oc import-image backend-v2:latest --from=jetzlstorfer/backend-v2:latest

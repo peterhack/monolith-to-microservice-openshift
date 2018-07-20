@@ -123,6 +123,11 @@ A simple curl should reveal that you are hitting the new version of the UI altho
 curl --header "Cbr-Header: ui-v1" http://production-m2m.<YOURURL>
 ```
 
+The following figure shows this approach from a conceptual point of view:
+
+![tm-ui-v1](../assets/tm-ui-v1.png)
+
+
 ## Canary deployment of tm-ui-v1
 
 We edit the route which we created in the ```monolith-proxy``` sub-project where we want to have 95&nbsp;% of the traffic hitting the original monolith-proxy service and only 5&nbsp;% of the overall traffic to be routed to the ticket-monster-ui-v1 service.
@@ -131,3 +136,6 @@ We edit the route which we created in the ```monolith-proxy``` sub-project where
 oc set route-backends production monolith-proxy=95 ticket-monster-ui-v1=5
 ```
 
+The following figure shows this approach from a conceptual point of view:
+
+![canary](../assets/tm-ui-canary.png)

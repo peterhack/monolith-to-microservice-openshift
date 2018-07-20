@@ -10,7 +10,7 @@ orders-service/ObjectStore/
 deployment/kubernetes/istio/istio-0.*
 temp/
 
-# folders that will be revealed later durin the journey
+# folders that will be revealed later during the journey
 deployment/
 dynatrace-oneagent-operator/cr_.yaml
 tm-ui-v1/httpd.conf

@@ -119,7 +119,8 @@ oc set env dc/router \
 
 ### Test your dark launch
 A simple curl should reveal that you are hitting the new version of the UI although you are targeting the normal ```prod-m2m``` frontend URL.
-```
+
+```sh
 curl --header "Cbr-Header: ui-v1" http://production-m2m.<YOURURL>
 ```
 

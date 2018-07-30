@@ -33,7 +33,7 @@ Edit the route in OpenShift according to the amount of traffic you want to send 
 For example, send 75 % of the traffic to ```ticket-monster-ui-v1``` and 25 % to ```ticket-monster-ui-v2``` via the production route. Over time, this value can be adjusted.
 
 ```
-oc set route oc set route-backends production ticket-monster-ui-v1=75 ticket-monster-ui-v2=25
+oc set route-backends production ticket-monster-ui-v1=75 ticket-monster-ui-v2=25
 ```
 
 

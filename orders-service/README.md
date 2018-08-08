@@ -1,4 +1,4 @@
-# OrderService as a Microservice for TicketMonster
+# OrdersService as a Microservice for TicketMonster
 
 This sub-project contains the microservice OrdersService that deals with TicketMonster's bounded conext of booking event tickets. It has its own data model as specified in ```./mysql-scripts/orders-schema.sql```. To extend the data model to the microservice's domain model, the Teiid framework is used in the code. This framework allows to create a virtual database view on the top of multiple databases. In case of OrdersService the legacy database of the monolith and its own database are merged to a virtual view.
 

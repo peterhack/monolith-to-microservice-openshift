@@ -20,7 +20,6 @@ This sub-project contains the microservice OrdersService that deals with TicketM
     ```
 By the end of this steps, you have a dedicated MySQL database named `orders` with the schema set up and the needed data inserted.
 
-``
 
 ## Configure and deploy the application
 

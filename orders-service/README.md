@@ -20,6 +20,17 @@ This sub-project contains the microservice OrdersService that deals with TicketM
     ```
 By the end of this steps, you have a dedicated MySQL database named `orders` with the schema set up and the needed data inserted.
 
+## Configure DBs for virtualization
+
+1. Grant access on TicketMonster DB
+    ```sql
+    GRANT ALL PRIVILEGES ON `ticketmonster`.* TO 'ticket'@'%';
+    ```
+1. Grant access on Orders DB
+    ```sql
+    GRANT ALL PRIVILEGES ON `orders`.* TO 'ticket'@'%';
+    ```
+
 ## Configure and deploy the application
 
 
@@ -58,3 +69,9 @@ By the end of this steps, you have the `orders` service in place. In order to ac
 The following figure shows this approach from a conceptual point of view:
 
 ![canary](../assets/tm-orders-service.png)
+
+
+## Troubleshooting
+
+- restart orders-service after restart of oders-db 
+- set permissions to ticketmonster mysql database

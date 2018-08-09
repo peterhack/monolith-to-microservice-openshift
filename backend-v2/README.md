@@ -109,7 +109,7 @@ exchange with new version to fix permission errors
 
 In your browser, navigate to the FF4J console at ```http://backend-v2-m2m.<yourclusterurl>/ff4j-console```. The output should look similar to the screenshot:
 
-![ff4j](assets/ff4j.png)
+![ff4j](../assets/ff4j.png)
  
 
 ## Conceptual view

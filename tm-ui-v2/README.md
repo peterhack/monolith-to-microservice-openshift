@@ -2,6 +2,7 @@
 
 This version of the frontend is configured to communicate with the ```backend-v1``` service.
 
+<!-- getting rid of config due to switch to env variables
 ## Configuration
 
 This proxy helps us keep friendly URLs even when there are composite UIs or composite microservice REST APIs
@@ -19,11 +20,13 @@ ProxyPassReverse "/rest" "http://backend:8080/rest"
 docker build . -t <YOURDOCKER>/ticket-monster-ui-v2:latest
 docker push <YOURDOCKER>/ticket-monster-ui-v2:latest
 ```
+-->
 
 ## Deploy & Expose
 
 ```
-oc new-app --docker-image=<YOURDOCKER>/ticket-monster-ui-v2:latest
+oc get routes
+oc new-app -e BACKENDURL=<yourbackendurl> --docker-image=jetzlstorfer/ticket-monster-ui-v2:latest
 oc expose service ticket-monster-ui-v2 --name=ui-v2
 ```
 

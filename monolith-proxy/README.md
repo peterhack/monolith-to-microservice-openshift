@@ -2,6 +2,7 @@
 
 Simple http proxy that sits in front of the monolith and redirects the traffic from and to the monolith.
 
+<!--
 ## Configuration
 Make sure you put your URL of the monolith in place in the ```httpd.conf``` file:
 ```
@@ -14,9 +15,13 @@ ProxyPassReverse "/" "http://monolith-m2m.YOURURL/"
 ```
 docker build . -t <YOURDOCKER>/monolith-proxy:latest
 docker push <YOURDOCKER>/monolith-proxy:latest
+-->
 
-# if needed, also create a new application in OpenShift
-oc new-app <YOURDOCKER>/monolith-proxy
+## Deploy
+
+```
+oc get routes
+oc new-app -e MONOLITHURL=<yourmonolithurl> jetzlstorfer/monolith-proxy:latest
 ```
 
 ## Expose it to the public

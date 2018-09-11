@@ -7,13 +7,13 @@ The purpose of this sub-project is to deploy it next to the ```monolith/``` proj
 ## Start this project
 Use the image provided by this project
 ```
-oc new-app --docker-image=jetzlstorfer/ticket-monster-ui-v1:latest
+oc new-app -e BACKENDURL=<yourbackendurl> --docker-image=jetzlstorfer/ticket-monster-ui-v1:latest
 ```
 or build the project by yourself and push it to docker
 ```
 docker build . -t <YOURDOCKER>/ticket-monster-ui-v1:latest
 docker push <YOURDOCKER>/ticket-monster-ui-v1:latest
-oc new-app --docker-image=<YOURDOCKER>/ticket-monster-ui-v1:latest
+oc new-app -e BACKENDURL=<yourbackendurl> --docker-image=<YOURDOCKER>/ticket-monster-ui-v1:latest
 ```
 
 ## Make it publicly available
@@ -22,6 +22,7 @@ Expose the service in OpenShift
 oc expose service ticket-monster-ui-v1 --name=ui-v1
 ```
 
+<!-- // not needed anymore since the env variable was introduced
 ## Configuration
 
 In ```httpd.conf``` the redirect to the monolith was inserted as a proxy. This proxy helps us keep friendly URLs even when there are composite UIs or composite microservice REST APIs. It also helps us avoid tripping the browser Same Origin policy. We use a simple HTTP server (apache) to serve the static content and then use the reverse proxy plugins to proxy REST calls to the appropriate microservice:
@@ -37,7 +38,7 @@ ProxyPassReverse "/rest" "http://<YOURURL>/rest"
 ```
 
 In contrast to the [original project](https://github.com/ticket-monster-msa/monolith) the base image in the ```Dockerfile``` was changed from httpd:2.4 to centos/httpd-24-centos7 in order to work in OpenShift smoothly.
-
+-->
 
 ## Dark launch
 The technical realisation is inspired by this blog post: https://blog.openshift.com/ocp-custom-routing/

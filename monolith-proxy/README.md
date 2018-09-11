@@ -21,7 +21,7 @@ docker push <YOURDOCKER>/monolith-proxy:latest
 
 ```
 oc get routes
-oc new-app -e MONOLITHURL=<yourmonolithurl> jetzlstorfer/monolith-proxy:latest
+oc new-app -e MONOLITHURL=<yourmonolithurl> --docker-image=jetzlstorfer/monolith-proxy:latest
 ```
 
 ## Expose it to the public

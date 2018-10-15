@@ -1,51 +1,51 @@
 -- MediaItem 0
-insert into MediaItem ( mediaType, url) values ( 'IMAGE', 'https://images.freeimages.com/images/large-previews/2b2/jefro-1422546.jpg');
+insert into MediaItem ( mediaType, url) values ( 'IMAGE', 'https://s3.amazonaws.com/ticketmonster-images/jefro-1422546.jpg');
 -- MediaItem 1
-insert into MediaItem ( mediaType, url) values ( 'IMAGE', 'https://upload.wikimedia.org/wikipedia/commons/0/04/Carnival_Puppets.jpg');
+insert into MediaItem ( mediaType, url) values ( 'IMAGE', 'https://s3.amazonaws.com/ticketmonster-images/Carnival_Puppets.jpg');
 -- MediaItem 2
 insert into MediaItem ( mediaType, url) values ( 'IMAGE', 'https://upload.wikimedia.org/wikipedia/commons/4/46/Opera_House_with_Sydney.jpg');
 -- MediaItem 3
-insert into MediaItem ( mediaType, url) values ( 'IMAGE', 'https://upload.wikimedia.org/wikipedia/commons/a/a2/Roy_Thomson_Hall_Toronto.jpg');
+insert into MediaItem ( mediaType, url) values ( 'IMAGE', 'https://s3.amazonaws.com/ticketmonster-images/Roy_Thomson_Hall_Toronto.jpg');
 -- MediaItem 4
-insert into MediaItem ( mediaType, url) values ( 'IMAGE', 'https://upload.wikimedia.org/wikipedia/commons/b/bf/West-stand-bmo-field.jpg');
+insert into MediaItem ( mediaType, url) values ( 'IMAGE', 'https://s3.amazonaws.com/ticketmonster-images/West-stand-bmo-field.jpg');
 -- MediaItem 5
-insert into MediaItem ( mediaType, url) values ( 'IMAGE', 'https://upload.wikimedia.org/wikipedia/commons/9/97/Brazil_national_football_team_training_at_Dobsonville_Stadium_2010-06-03_10.jpg');
+insert into MediaItem ( mediaType, url) values ( 'IMAGE', 'https://s3.amazonaws.com/ticketmonster-images/Brazil_national_football_team_training_at_Dobsonville_Stadium_2010-06-03_10.jpg');
 -- MediaItem 6
-insert into MediaItem ( mediaType, url) values ( 'IMAGE', 'https://upload.wikimedia.org/wikipedia/commons/9/9a/Bmo_field_%288820851518%29.jpg');
+insert into MediaItem ( mediaType, url) values ( 'IMAGE', 'https://s3.amazonaws.com/ticketmonster-images/Bmo_field_(8820851518).jpg');
 -- MediaItem 7
-insert into MediaItem ( mediaType, url) values ( 'IMAGE', 'https://images.freeimages.com/images/large-previews/6cb/clubin-it-1-1504531.jpg');
+insert into MediaItem ( mediaType, url) values ( 'IMAGE', 'https://s3.amazonaws.com/ticketmonster-images/clubin-it-1-1504531.jpg');
 -- MediaItem 8
-insert into MediaItem ( mediaType, url) values ( 'IMAGE', 'https://images.freeimages.com/images/large-previews/c0e/dusk-music-1-1422760.jpg');
+insert into MediaItem ( mediaType, url) values ( 'IMAGE', 'https://s3.amazonaws.com/ticketmonster-images/dusk-music-1-1422760.jpg');
 -- MediaItem 9
-insert into MediaItem ( mediaType, url) values ( 'IMAGE', 'https://images.freeimages.com/images/large-previews/76f/venice-carneval-mask-1414335.jpg');
+insert into MediaItem ( mediaType, url) values ( 'IMAGE', 'https://s3.amazonaws.com/ticketmonster-images/venice-carneval-mask-1414335.jpg');
 -- MediaItem 10
-insert into MediaItem ( mediaType, url) values ( 'IMAGE', 'https://upload.wikimedia.org/wikipedia/commons/d/de/Tim_Henman_backhand_volley_Wimbledon_2004.jpg');
+insert into MediaItem ( mediaType, url) values ( 'IMAGE', 'https://s3.amazonaws.com/ticketmonster-images/Tim_Henman_backhand_volley_Wimbledon_2004.jpg');
 -- MediaItem 11
-insert into MediaItem ( mediaType, url) values ( 'IMAGE', 'https://images.freeimages.com/images/large-previews/c37/rock-1577380.jpg');
+insert into MediaItem ( mediaType, url) values ( 'IMAGE', 'https://s3.amazonaws.com/ticketmonster-images/rock-1577380.jpg');
 -- MediaItem 12
-insert into MediaItem ( mediaType, url) values ( 'IMAGE', 'https://images.freeimages.com/images/large-previews/28c/snowboard-jump-series-1-1362399.jpg');
+insert into MediaItem ( mediaType, url) values ( 'IMAGE', 'https://s3.amazonaws.com/ticketmonster-images/snowboard-jump-series-1-1362399.jpg');
 -- MediaItem 13
-insert into MediaItem ( mediaType, url) values ( 'IMAGE', 'https://images.freeimages.com/images/large-previews/ebd/flamenco-1551386.jpg');
+insert into MediaItem ( mediaType, url) values ( 'IMAGE', 'https://s3.amazonaws.com/ticketmonster-images/flamenco-1551386.jpg');
 -- MediaItem 14
-insert into MediaItem ( mediaType, url) values ( 'IMAGE', 'https://images.freeimages.com/images/large-previews/ced/drumer-1418150.jpg');
+insert into MediaItem ( mediaType, url) values ( 'IMAGE', 'https://s3.amazonaws.com/ticketmonster-images/drumer-1418150.jpg');
 -- MediaItem 15
-insert into MediaItem ( mediaType, url) values ( 'IMAGE', 'https://images.freeimages.com/images/large-previews/a93/butterfly-1390143.jpg');
+insert into MediaItem ( mediaType, url) values ( 'IMAGE', 'https://s3.amazonaws.com/ticketmonster-images/butterfly-1390143.jpg');
 -- MediaItem 16
-insert into MediaItem ( mediaType, url) values ( 'IMAGE', 'https://images.freeimages.com/images/large-previews/ad1/mime-artist-1434475.jpg');
+insert into MediaItem ( mediaType, url) values ( 'IMAGE', 'https://s3.amazonaws.com/ticketmonster-images/mime-artist-1434475.jpg');
 -- MediaItem 17
-insert into MediaItem ( mediaType, url) values ( 'IMAGE', 'https://images.freeimages.com/images/large-previews/2a7/hands-1317177.jpg');
+insert into MediaItem ( mediaType, url) values ( 'IMAGE', 'https://s3.amazonaws.com/ticketmonster-images/hands-1317177.jpg');
 -- MediaItem 18
-insert into MediaItem ( mediaType, url) values ( 'IMAGE', 'https://images.freeimages.com/images/large-previews/8d4/erika-musik-en-viu-1421987.jpg');
+insert into MediaItem ( mediaType, url) values ( 'IMAGE', 'https://s3.amazonaws.com/ticketmonster-images/erika-musik-en-viu-1421987.jpg');
 -- MediaItem 19
-insert into MediaItem ( mediaType, url) values ( 'IMAGE', 'https://images.freeimages.com/images/large-previews/1c1/clap-your-hands-say-yeah-1-1555963.jpg');
+insert into MediaItem ( mediaType, url) values ( 'IMAGE', 'https://s3.amazonaws.com/ticketmonster-images/clap-your-hands-say-yeah-1-1555963.jpg');
 -- MediaItem 20
-insert into MediaItem ( mediaType, url) values ( 'IMAGE', 'https://upload.wikimedia.org/wikipedia/commons/8/88/Game_3_of_the_2006_NBA_Finals.jpg');
+insert into MediaItem ( mediaType, url) values ( 'IMAGE', 'https://s3.amazonaws.com/ticketmonster-images/Game_3_of_the_2006_NBA_Finals.jpg');
 -- MediaItem 21
-insert into MediaItem ( mediaType, url) values ( 'IMAGE', 'https://images.freeimages.com/images/large-previews/ad6/concert-1-1438833.jpg');
+insert into MediaItem ( mediaType, url) values ( 'IMAGE', 'https://s3.amazonaws.com/ticketmonster-images/concert-1-1438833.jpg');
 -- MediaItem 22
-insert into MediaItem ( mediaType, url) values ( 'IMAGE', 'https://upload.wikimedia.org/wikipedia/commons/d/dc/Paris_Opera_full_frontal_architecture%2C_May_2009.jpg');
+insert into MediaItem ( mediaType, url) values ( 'IMAGE', 'https://s3.amazonaws.com/ticketmonster-images/Paris_Opera_full_frontal_architecture%2C_May_2009.jpg');
 -- MediaItem 23
-insert into MediaItem ( mediaType, url) values ( 'IMAGE', 'https://upload.wikimedia.org/wikipedia/commons/c/c0/Boston_Symphony_Hall_from_the_south.jpg');
+insert into MediaItem ( mediaType, url) values ( 'IMAGE', 'https://s3.amazonaws.com/ticketmonster-images/Boston_Symphony_Hall_from_the_south.jpg');
 
 -- Venue 1
 insert into Venue ( name, city, country, street, description, mediaitem_id, capacity) values ( 'Roy Thomson Hall', 'Toronto', 'Canada', '60 Simcoe Street','Roy Thomson Hall is the home of the Toronto Symphony Orchestra and the Toronto Mendelssohn Choir.',4, 11000);
@@ -138,7 +138,7 @@ insert into Event ( name, description, mediaitem_id, category_id) values ( 'Shan
 -- Event 3
 insert into Event ( name, description, mediaitem_id, category_id) values ( 'Brazil vs. Italy', 'A friendly replay of the famous World Cup final.', 6, 4);
 -- Event 4
-insert into Event ( name, description, mediaitem_id, category_id) values ( 'All State Football Championship', 'Show your colors in Friday Night Lights! Come see the Red Hot Scorpions put the sting on the winners of Sunday''s Coastal Quarterfinals for all state bragging rights. Fans entering the stadium in team color face paint will receive a $5 voucher redeemable with any on-site vendor. Body paint in lieu of clothing will not be permitted for this family friendly event.', 7, 4);
+insert into Event ( name, description, mediaitem_id, category_id) values ( 'All State Football Championship', 'Show your colors in Friday Night Lights! Come see the Red Hot Scorpions put the sting on the winners of Sunday''s Coastal Quarterfinals for all state bagging rights. Fans entering the stadium in team color face paint will receive a $5 voucher redeemable with any on-site vendor. Body paint in lieu of clothing will not be permitted for this family friendly event.', 7, 4);
 -- Event 5
 insert into Event ( name, description, mediaitem_id, category_id) values ( 'Chris Lewis Quarterfinals', 'Every tennis enthusiast will want to see Wimbledon legend Chris Lewis as he meets archrival Deuce Wild in the quarterfinals of one of the top U.S. tournaments. Finals are already sold out, so do not miss your chance to see the real action in play on the eve of the big day!', 11, 4);
 -- Event 6

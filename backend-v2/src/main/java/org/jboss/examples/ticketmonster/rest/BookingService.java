@@ -48,7 +48,7 @@ public class BookingService extends BaseEntityService<Booking> {
     @Inject @Created
     private Event<Booking> newBookingEvent;
 
-    private String ordersServiceUri = "http://URL-to-the-order-service.com/rest/bookings";
+    private String ordersServiceUri = "http://orders-service/rest/bookings";
     
     public BookingService() {
         super(Booking.class);

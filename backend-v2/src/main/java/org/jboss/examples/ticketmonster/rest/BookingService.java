@@ -48,7 +48,7 @@ public class BookingService extends BaseEntityService<Booking> {
     @Inject @Created
     private Event<Booking> newBookingEvent;
 
-    private String ordersServiceUri = "http://orders-service/rest/bookings";
+    private String ordersServiceUri = "http://ticketmonster-orders-service:8080/rest/bookings";
     
     public BookingService() {
         super(Booking.class);

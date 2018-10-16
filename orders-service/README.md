@@ -15,27 +15,15 @@ This sub-project contains the microservice OrdersService that deals with TicketM
 1. Connect to the DB pod and execute SQL statements
     ```bash
     oc rsh <your-db-pod>
-    mysql -u root orders < V1__0_ordersdb-schema.sql
-    mysql -u root orders < V1__1_ordersdb-data.sql
+    cd ~
+    mysql -u root orders < 0_ordersdb-schema.sql
+    mysql -u root orders < 1_ordersdb-data.sql
     ```
 By the end of this steps, you have a dedicated MySQL database named `orders` with the schema set up and the needed data inserted.
 
 
 ## Configure and deploy the application
 
-
-1. Edit the database connection strings in the ```\src\main\resources\application-mysql.properties``` file:
-    ```properties
-    spring.datasource.legacyDS.url=jdbc:mysql://<yourticketmonsterdb>:3306/ticketmonster?useSSL=false
-    spring.datasource.legacyDS.username=ticket
-    spring.datasource.legacyDS.password=monster
-    spring.datasource.legacyDS.driverClassName=com.mysql.jdbc.Driver
-
-    spring.datasource.ordersDS.url=jdbc:mysql://<yourorderdb>:3306/orders?useSSL=false
-    spring.datasource.ordersDS.username=ticket
-    spring.datasource.ordersDS.password=monster
-    spring.datasource.ordersDS.driverClassName=com.mysql.jdbc.Driver
-    ```
 1. Build the application with Maven
     ```
     mvn clean install -P mysql,kubernetes fabric8:build -D docker.image.name=<yourdocker>/orders-service:latest -D skipTests

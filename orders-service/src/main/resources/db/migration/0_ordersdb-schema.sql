@@ -99,3 +99,5 @@ CREATE TABLE id_generator
   IDKEY char(20) NOT NULL,
   IDVALUE bigint NOT NULL
 );
+
+GRANT ALL PRIVILEGES ON `orders`.* TO 'ticket'@'%';

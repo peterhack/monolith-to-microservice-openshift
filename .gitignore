@@ -20,3 +20,6 @@ tm-ui-v2-error/
 istio/
 monolith/_*
 *_.*
+backend-v1/.factorypath
+backend-v2/.factorypath
+monolith/.factorypath

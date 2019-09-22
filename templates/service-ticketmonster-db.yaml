@@ -1,0 +1,21 @@
+﻿kind: Service
+apiVersion: v1
+metadata:
+  name: ticketmonster-db
+  labels:
+    app: ticketmonster-db
+  annotations:
+    openshift.io/generated-by: OpenShiftNewApp
+spec:
+  ports:
+    - name: 3306-tcp
+      protocol: TCP
+      port: 3306
+      targetPort: 3306
+  selector:
+    app: ticketmonster-db
+    deploymentconfig: ticketmonster-db
+  type: ClusterIP
+  sessionAffinity: None
+status:
+  loadBalancer: {}

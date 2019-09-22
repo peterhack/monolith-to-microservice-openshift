@@ -1,0 +1,17 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  annotations:
+    openshift.io/host.generated: 'true'
+  labels:
+    app: ticketmonster-monolith
+  name: monolith
+spec:
+  port:
+    targetPort: 8080-tcp
+  to:
+    kind: Service
+    name: ticketmonster-monolith
+    weight: 100
+  wildcardPolicy: None
+status:

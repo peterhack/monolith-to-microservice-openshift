@@ -1,16 +1,18 @@
-kind: DeploymentConfig
 apiVersion: apps.openshift.io/v1
+kind: DeploymentConfig
 metadata:
   annotations:
+    openshift.io/generated-by: OpenShiftNewApp
+  generation: 2
   labels:
-    app: ticketmonster-db
-  name: ticketmonster-db
+    app: ticketmonster-monolith
+  name: ticketmonster-monolith
 spec:
   replicas: 1
   revisionHistoryLimit: 10
   selector:
-    app: ticketmonster-db
-    deploymentconfig: ticketmonster-db
+    app: ticketmonster-monolith
+    deploymentconfig: ticketmonster-monolith
   strategy:
     activeDeadlineSeconds: 21600
     resources: {}
@@ -24,38 +26,31 @@ spec:
   template:
     metadata:
       annotations:
+        openshift.io/generated-by: OpenShiftNewApp
       creationTimestamp: null
       labels:
-        app: ticketmonster-db
-        deploymentconfig: ticketmonster-db
+        app: ticketmonster-monolith
+        deploymentconfig: ticketmonster-monolith
     spec:
       containers:
         - env:
-            - name: MYSQL_DATABASE
-              value: ticketmonster
-            - name: MYSQL_PASSWORD
-              value: monster
-            - name: MYSQL_USER
-              value: ticket
+            - name: MYSQL_SERVICE_HOST
+              value: ticketmonster-db
+            - name: MYSQL_SERVICE_PORT
+              value: '3306'
           image: >-
-            mysql:5.5
-          imagePullPolicy: IfNotPresent
-          name: ticketmonster-db
+            dynatraceacm/ticketmonster-monolith
+          imagePullPolicy: Always
+          name: ticketmonster-monolith
           ports:
-            - containerPort: 3306
+            - containerPort: 8080
               protocol: TCP
           resources: {}
           terminationMessagePath: /dev/termination-log
           terminationMessagePolicy: File
-          volumeMounts:
-            - mountPath: /var/lib/mysql/data
-              name: ticketmonster-db-volume-1
       dnsPolicy: ClusterFirst
       restartPolicy: Always
       schedulerName: default-scheduler
       securityContext: {}
       terminationGracePeriodSeconds: 30
-      volumes:
-        - emptyDir: {}
-          name: ticketmonster-db-volume-1
   test: false

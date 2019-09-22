@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+  labels:
+    app: ticketmonster-monolith
+  name: ticketmonster-monolith
+spec:
+  clusterIP: 
+  ports:
+    - name: 8080-tcp
+      port: 8080
+      protocol: TCP
+      targetPort: 8080
+  selector:
+    app: ticketmonster-monolith
+    deploymentconfig: ticketmonster-monolith
+  sessionAffinity: None
+  type: ClusterIP
+status:
+  loadBalancer: {}
